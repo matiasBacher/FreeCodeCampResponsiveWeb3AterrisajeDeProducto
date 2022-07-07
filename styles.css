@@ -1,0 +1,261 @@
+@font-face {
+    font-family: 'Material Symbols Outlined';
+    font-style: normal;
+    font-weight: 100 700;
+    src: url(https://fonts.gstatic.com/s/materialsymbolsoutlined/v21/kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsI.woff2) format('woff2');
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+}
+
+span  {
+    font-family: 'Material Symbols Outlined';
+    font-size: 80px;
+    font-variation-settings:
+    'FILL' 1,
+    'wght' 700;
+    color: red;
+   display: block; 
+
+   line-height: 58px;
+}
+body{
+    background-color: rgb(218, 216, 216);
+    font-family: 'Lato', sans-serif;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    height: auto ;
+    width: 100%;
+    background-color:white;
+    margin-bottom: 20px;
+    padding: 0px 5%;
+    box-shadow: 0px 5px 8px rgb(134, 134, 134);
+}
+
+#div-header{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 270px;
+    width: 40%;
+    justify-content:space-between ;
+}
+
+#div-header>img {
+    width: 60px;
+    height: auto;
+}
+
+#nav-bar {
+    width: 70%;
+    max-width: 500px;
+}
+
+#nav-bar>ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    width: 100%;
+    padding: 0px;
+
+}
+
+#nav-bar li {
+    list-style: none;
+    font-weight: bold;
+
+}
+
+#nav-bar a {
+    text-decoration: none;
+    color: black;    
+    text-transform: capitalize;
+    font-size: 20px;
+    display: block;
+}
+
+#nav-bar a:hover {
+    color: rgb(83, 82, 82);
+    transform: scale(1.2);
+    transition: all 0.25s;
+}
+
+#main {
+    display: flex;
+    margin: 0px auto;
+    width: 90%;
+    max-width: 1000px;
+    flex-direction: column;
+    align-items: center;
+}
+#section-form, #section-feacture, #section-video, #section-pricing{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+#section-form form {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    margin: 0px auto;
+}
+
+#section-form h1{
+    font-size: 40px;
+    font-weight: 700;
+    text-align: justify;
+}
+
+
+#email {
+    width: 100%;
+    max-width: 500px;
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid;
+}
+
+#email::placeholder {
+    text-align: center;
+    font-size: 20px;
+}
+
+#submit {
+    width: 100%;
+    max-width: 300px;
+}
+
+.button {
+    background-color: red;
+    color: white;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+}
+.button:hover {
+    background-color: rgb(255, 93, 93);
+    transform: scale(1.1);
+    transition: all 0.25s;
+    cursor: pointer;
+}
+
+#section-feacture {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: space-around;
+    width: fit-content;
+
+}
+.feature-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;    
+}
+.feature-container>div {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 25px;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.title-feature {
+    color: red;
+    font-weight: bolder;
+}
+#section-video {
+    width: 100%;
+}
+#section-video iframe{
+    width: 100% ;
+    height: 67.5vw;
+    max-height: 675px;
+}
+
+#section-pricing {
+    display: flex;
+    justify-content: flex-start;
+    text-align: center;
+    width: 100%;
+
+}
+.class-box-pricing {
+    background-color: white;
+    width: calc(100%/3 - 40px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    min-width: 230px;
+    margin: 20px;
+}
+.class-box-pricing>*{
+    padding: 10px 0px;
+}
+
+.feature-box-pricing, .pricing {
+    width: 200px;
+}
+
+.title-box-pricing {
+    background-color: black;
+    color: white;
+    width: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.pricing {
+    font-size: xx-large;
+    font-weight: 900;
+    color: red;
+}
+
+.pricing::before{
+    content: '$ ';
+}
+
+footer {
+    background-color: black;
+    text-align: right;
+    color: white;
+    padding: 5px ;
+}
+
+@media (max-width:875px) {
+    #div-header h1{
+        display: none;
+    }
+    #div-header {
+        width: 60px;
+    }
+    #section-pricing {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width:420px) {
+    #section-form form {
+        height: 350px;
+    }
+    #nav-bar a {
+        font-size: 14px ;
+    }
+}
